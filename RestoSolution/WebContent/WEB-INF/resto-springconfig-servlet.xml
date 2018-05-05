@@ -23,24 +23,25 @@
  <context:component-scan base-package="resto.com.app" />
  
 <!-- Add support for conversion, formatting and validation support -->
- <mvc:annotation-driven/>
+ 
  
 <!-- Define Spring MVC view resolver -->
  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-  <property name="prefix" value="/WEB-INF/view/" />
+  <property name="prefix" value="/WEB-INF/restopages" />
   <property name="suffix" value=".jsp" />
  </bean>
  
  <!-- A handler for serving static resources -->
  <mvc:resources mapping="/assets/**" location="/assets/" />
  
- 
+ <!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven />
  
  <!--  Define Database DataSource -->
  <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"> 
  
  <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-    <property name="jdbcUrl" value="jdbc:mysql://localhost/sys?useSSL=false"/>
+    <property name="jdbcUrl" value="jdbc:mysql://localhost/resto?useSSL=false"/>
     <property name="user" value="root"/>
     <property name="password" value="Siemens123456$"/>
     <property name="acquireIncrement" value="1" />
