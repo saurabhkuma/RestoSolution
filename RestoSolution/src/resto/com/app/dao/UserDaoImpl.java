@@ -25,7 +25,7 @@ public class UserDaoImpl implements UserDao{
 		   Session session = factory.getCurrentSession();
 		  User user = null;
 		// create a query to select all orders
-		  Query theQuery = session.createQuery("select login_id ,password ,status from user where password = :password and login_id = :username");
+		  Query theQuery = session.createQuery(SqlScript.loginValidation);
 		  
 		  List<User> listuser = theQuery.setString("password", password).setString("username", username).list();
 		  
