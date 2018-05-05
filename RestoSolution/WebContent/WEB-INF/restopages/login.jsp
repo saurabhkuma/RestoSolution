@@ -14,7 +14,7 @@
                             <form:label path="username">Username: </form:label>
                         </td>
                         <td>
-                            <form:input path="username" name="username" id="username" />
+                            <input type="text" path="username" name="username" id="username" />
                         </td>
                     </tr>
                     <tr>
@@ -22,13 +22,13 @@
                             <form:label path="password">Password:</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" />
+                            <input type="password" path="password" name="password" id="password" />
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="login" name="login">Login</form:button>
+                            <button id="login" name="login">Login</button>
                         </td>
                     </tr>
                     <tr></tr>

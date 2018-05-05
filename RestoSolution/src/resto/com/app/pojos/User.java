@@ -12,12 +12,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
 
 @Entity
 @Table(name="login")
 public class User {
 	
 	 
+	@Id
+	@GeneratedValue 
 	@Column(name="login_id") 
 	private String login_id;
 	

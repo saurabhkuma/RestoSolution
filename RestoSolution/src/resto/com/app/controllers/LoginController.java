@@ -4,6 +4,7 @@ import java.util.List;
 
 
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -23,7 +24,6 @@ import resto.com.app.services.LoginService;
 
 
 @Controller
-@RequestMapping("/login")
 public class LoginController {
 
 	
@@ -32,7 +32,7 @@ public class LoginController {
 	  
 	  
 	 
-	  @GetMapping("/restologin")
+	  @PostMapping("/restologin")
 	  public ModelAndView loginProcess(Model model,
 			  @ModelAttribute("login") Login login) {
 		  
@@ -40,6 +40,8 @@ public class LoginController {
 		// get orders from dao
 		  User user = loginService.loginToUser(login.getUsername(), login.getPassword());
 		  
+		  if(user != null)
+		  System.out.println("username status is "+user.getStatus());
 		  // add the orders to the model
 		  model.addAttribute("user", user);
 		  

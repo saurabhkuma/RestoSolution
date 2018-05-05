@@ -8,7 +8,7 @@
     <body>
         <table>
             <tr>
-                <td>Welcome ${user.status}  to Restaurant Application</td>
+              <marquee>  <td>Welcome  ${user.login_id}  to Restaurant Application . Your current status is ${user.status }</td> </marquee>
             </tr>
             <tr>
             </tr>
